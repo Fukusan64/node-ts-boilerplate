@@ -4,8 +4,7 @@
   "type": "module",
   "description": "Boilerplate for Node.js single executable applications",
   "scripts": {
-    "check": "biome check --write src && tsc --noEmit",
-    "exec": "npm run _bundle && node build/main.cjs",
+    "check": "biome check --write src/ && tsc",
     "build": "npm run check && npm run _bundle && npm run _copy-node && npm run _prepare-blob && npm run _inject-blob",
     "_bundle": "esbuild --platform=node --bundle --minify --outfile=build/main.cjs src/main.ts",
     "_copy-node": "cp $(which node) build/app",
@@ -14,7 +13,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
-    "@tsconfig/node-lts": "^22.0.2",
+    "@tsconfig/node-ts": "^23.6.2",
+    "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.2.1",
     "esbuild": "^0.27.0",
     "postject": "^1.0.0-alpha.6",

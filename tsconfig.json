@@ -1,8 +1,10 @@
 {
-  "extends": "@tsconfig/node-lts",
+  "extends": [
+    "@tsconfig/node24/tsconfig.json",
+    "@tsconfig/node-ts/tsconfig.json",
+  ],
   "compilerOptions": {
-    "isolatedModules": true,
-    "outDir": "build/",
+    "noEmit": true,
   },
   "include": [
     "src/",

@@ -14,10 +14,10 @@ Write your code in `src/main.ts`.
 npm run check
 ```
 
-### Run code without injecting
+### Run code without build (for debug)
 
 ```bash
-npm run exec
+node src/main.ts
 ```
 
 ### Build
