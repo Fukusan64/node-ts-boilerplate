@@ -12,8 +12,8 @@ Write your code in `src/main.ts`.
 npm run check
 ```
 
-### Run code without build (for debug)
+### Run code
 
 ```bash
-node src/main.ts
+node .
 ```
