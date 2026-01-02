@@ -74,6 +74,11 @@ echo -e "${GREEN}Installing dependencies (npm install)...${NC}"
 npm install
 
 echo ""
+echo -e "${GREEN}Resetting git repository...${NC}"
+rm -rf .git
+git init
+
+echo ""
 echo -e "${GREEN}Setup completed!${NC}"
 echo ""
 
@@ -83,3 +88,4 @@ if [[ "$DELETE_SCRIPT" == "y" || "$DELETE_SCRIPT" == "Y" ]]; then
   rm -- "$0"
   echo "setup.sh has been deleted."
 fi
+
